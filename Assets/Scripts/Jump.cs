@@ -10,7 +10,7 @@ public class Jump : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) &&  isGrounded) // If space is pressed and the player is grounded
         {
-          rb.linearVelocity = new Vector2(rb.linearVelocity.x,jumpForce); // A script to make the jump more smooth (linear) and predictable\
+          rb.linearVelocity = new Vector2(rb.linearVelocity.x,jumpForce); // A script to make the jump more smooth (linear) and predictable
           isGrounded=false;
         }
     }
