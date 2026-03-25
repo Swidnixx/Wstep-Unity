@@ -16,7 +16,11 @@ public class Jump : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision) // When player touches ANY surface
     {
-        isGrounded = true;
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+
     }
         void OnCollisionExit2D(Collision2D collision) // When player stops touching surface
     {
