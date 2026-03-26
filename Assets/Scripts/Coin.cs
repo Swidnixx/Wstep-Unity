@@ -5,7 +5,7 @@ public class Coin : MonoBehaviour
     void Update()
     {
         // This makes the coin spin constantly
-        transform.Rotate(0,1,0 * Time.deltaTime);
+        transform.Rotate(0,1,0);
     }
 
     void OnTriggerEnter2D(Collider2D other)

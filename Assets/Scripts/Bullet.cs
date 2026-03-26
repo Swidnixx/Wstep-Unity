@@ -6,8 +6,8 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        // Deletes the bullet after 1s (feels longer?)
-        Destroy(gameObject, 1f);
+        // Deletes the bullet after 2s (feels longer?)
+        Destroy(gameObject, 2f);
     }
 
     void Update()
@@ -18,7 +18,10 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        other.GetComponent<PlayerHealth>().TakeDamage(1); //Makes the player take damage, using the function TakeDamage from PlayerHealth.cs
-        Destroy(gameObject);
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<PlayerHealth>().TakeDamage(1); //Makes the player take damage, using the function TakeDamage from PlayerHealth.cs
+        }
+        Destroy(gameObject); //Outside the if loop so it destroys the object no matter what it hits.
     }
 }
