@@ -5,7 +5,7 @@ public class PlayerHealth : MonoBehaviour
     public int hp = 5; // Health, can be changed in Unity Inspector
     private float iFrameTimer = 0f; 
     public float iFrameDuration = 1f; // How long the i-frames are
-
+    public GameObject gameOverText;
     void Update()
     {
         if (iFrameTimer >0f)
@@ -24,6 +24,8 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log(hp);
         if (hp<=0)
         {
+            Camera.main.transform.SetParent(null); // Save the camera before killing the player
+            gameOverText.SetActive(true); // Display the game over text
             Destroy(gameObject);
             Debug.Log("Game Over!");
         }

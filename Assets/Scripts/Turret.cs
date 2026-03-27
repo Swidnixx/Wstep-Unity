@@ -12,6 +12,7 @@ public class Turret : MonoBehaviour
 
     void Update()
     {
+         if (player == null) return; // Stop if player is dead
         // Check how far away the player is
         float distance = Vector2.Distance(transform.position, player.position);
 
