@@ -4,7 +4,7 @@ public class Coin : MonoBehaviour
 {
     void Update()
     {
-        // This makes the coin spin constantly
+        // This makes the coin spin constantly on the y axis
         transform.Rotate(0,1,0);
     }
 

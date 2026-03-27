@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int hp =5; // Health, can be changed in Unity Inspector
-    private float iFrameTimer =0f;
-    public float iFrameDuration=1f;
+    public int hp = 5; // Health, can be changed in Unity Inspector
+    private float iFrameTimer = 0f; 
+    public float iFrameDuration = 1f; // How long the i-frames are
 
     void Update()
     {

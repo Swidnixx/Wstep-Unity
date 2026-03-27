@@ -6,8 +6,7 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        // Deletes the bullet after 2s (feels longer?)
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 2f); // Deletes the bullet after 2s (feels longer?)
     }
 
     void Update()

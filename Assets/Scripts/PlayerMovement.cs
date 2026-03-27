@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal");
 
-        // This moves the player based on what keys are pressed (WASD/Arrow keys)
+        // This moves the player based on what keys are pressed (AD/Arrow keys)
         rb.linearVelocity=new Vector2(x*speed,rb.linearVelocity.y);
     }
 }
